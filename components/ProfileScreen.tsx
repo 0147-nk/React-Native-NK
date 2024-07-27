@@ -5,13 +5,15 @@ import { styles } from "../styles/styles"; //not necessary to add .tsx after fil
 const ProfileScreen = (): React.JSX.Element => {
   const profileIMG = require("../assets/myProfile.jpg");
   const newProfileIMG = require("../assets/newProfile.jpg");
+
   const [profileImg, setProfile] = useState(profileIMG);
   const [name, setName] = useState("Naiyana Norkaew");
+
   const handleChangeName = () => {
-    setName("Okinii");
+    setName(name == "Naiyana Norkaew" ? "Okinii" : "Naiyana Norkaew");
   };
   const handleChangeIMG = () => {
-    setProfile(newProfileIMG);
+    setProfile(profileImg == profileIMG ? newProfileIMG : profileIMG);
   };
 
   return (
