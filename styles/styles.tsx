@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container: {
       alignItems: "center",
       padding: 20,
-      borderBlockColor: "#00457a", //change bg color to navy blue
+      //backgroundColor: "#00457a", //change bg color to navy blue
     },
   
     profileImg: {
@@ -20,20 +20,22 @@ const styles = StyleSheet.create({
       width: "100%",
       padding: 20,
       borderRadius: 10,
-      backgroundColor: "white",
+      backgroundColor: "#003249",
       elevation: 5, 
       marginTop: 50,
     },
   
     profileName: {
       fontSize: 22,
-      color: "#75a8d1",
+      color: "#CCDBDC",
       fontWeight: "bold",
-      paddingLeft: 7,
+      paddingLeft: 10,
     },
 
     btn: {
-      marginTop: 50,
+      paddingTop: 10,
+      paddingBottom: 10,
+      paddingLeft: 10,
     },
 })
 
