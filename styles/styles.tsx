@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       paddingLeft: 7,
     },
+
+    btn: {
+      marginTop: 50,
+    },
 })
 
 export {styles};
