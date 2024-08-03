@@ -7,10 +7,7 @@ type AppHeaderProps = {
   message: string;
 };
 
-const AppHeader = ({
-  fullname,
-  message,
-}: AppHeaderProps): React.JSX.Element => {
+const AppHeader = ({fullname, message}: AppHeaderProps): React.JSX.Element => {
   return (
     <View style={stylePractice.header}>
       <Text>Input your Fullname : {fullname}</Text>

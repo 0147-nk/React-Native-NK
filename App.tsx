@@ -1,4 +1,4 @@
-import { StyleSheet, View, TextInput } from "react-native";
+import { Alert, StyleSheet, View, TextInput } from "react-native";
 import React, { useState, useEffect } from "react";
 import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
@@ -9,9 +9,13 @@ export default function App(): React.JSX.Element {
 
   const [fullname, setFullname] = useState("");
   const [message, setMessage] = useState("Message from App.tsx");
-  const [footerMessage, setFotterMessage] = useState(
+  const [footerMessage, setFooterMessage] = useState(
     "Thai-Nichi Institute of Technology"
   );
+
+  const handleButtonClick = () => {
+    Alert.alert("Hello", `Input your fullname:\n${fullname}`);
+  };
 
   useEffect(() => {
     console.log("Componenet has mounted");
@@ -26,7 +30,8 @@ export default function App(): React.JSX.Element {
       <AppHeader 
         fullname={fullname}
         message={message} />
-      <Content message={message} fullname={fullname} />
+      {/* <Content message={message} fullname={fullname} /> */}
+      <Content message={message} handleButtonClick={handleButtonClick} />
       <AppFooter footerMessage = {footerMessage} />
       <TextInput
         style = {stylePractice.input}   
