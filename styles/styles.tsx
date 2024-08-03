@@ -108,4 +108,25 @@ const stylePractice = StyleSheet.create({
   },
 });
 
-export { styles, stylePractice };
+const stylesLogin = StyleSheet.create({ 
+  container: { 
+    justifyContent: "center", 
+    padding: 20, 
+    marginTop: 35, 
+    backgroundColor: '#ffffff', // ตงคาสพนหลงเปนสขาว 
+    borderRadius: 10, // เพมความมนใหกบขอบคอนเทนเนอร 
+    elevation: 3, // เพมเงาใหกบคอนเทนเนอร (เฉพาะ Android) 
+    width: '100%', // ตงความกวางของ container ให้เต็มหน้าจอ 
+  }, 
+  input: { 
+    height: 45, // เพมความสงของ TextInput 
+    borderColor: "gray", // เปลยนสขอบเปนสเทาออน 
+    borderWidth: 1,  
+    borderRadius: 8, // เพมความมนใหกบขอบ TextInput 
+    marginBottom: 15, // เพมระยะหางดานลางระหวาง TextInput 
+    paddingHorizontal: 15, // เพมระยะหางภายใน TextInput 
+    backgroundColor: "#f9f9f9", // ตงคาสพนหลงของ TextInput 
+  },
+}); 
+ 
+export { styles, stylePractice, stylesLogin };

@@ -8,9 +8,9 @@ const App = ():React.JSX.Element => {
 
   return (
     <View>
-      {/* <Text>App</Text> */}
-      {/* <ProfileScreen/> */}
-      <UseEffectExample/>
+      <Text>App</Text>
+      <ProfileScreen/>
+      {/* <UseEffectExample/> */}
     </View>
   )
 }
