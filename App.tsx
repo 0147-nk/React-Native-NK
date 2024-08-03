@@ -1,16 +1,41 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import ProfileScreen from './components/ProfileScreen'
+import { StyleSheet, View, TextInput } from "react-native";
+import React, { useState, useEffect } from "react";
+import AppFooter from "./components/AppFooter";
+import AppHeader from "./components/AppHeader";
+import Content from "./components/Content";
+import { stylePractice } from "./styles/styles";
 
-const App = ():React.JSX.Element => {
+export default function App(): React.JSX.Element {
+
+  const [fullname, setFullname] = useState("");
+  const [message, setMessage] = useState("Message from App.tsx");
+  const [footerMessage, setFotterMessage] = useState(
+    "Thai-Nichi Institute of Technology"
+  );
+
+  useEffect(() => {
+    console.log("Componenet has mounted");
+  }, []);
+
+  useEffect(() => {
+    console.log(`Fullname has changed to : ${fullname}`);
+  }, [fullname]); //this fucntion will run in log whenever fullname variable is changed
+
   return (
-    <View>
-      <Text>App</Text>
-      <ProfileScreen/>
+    <View style={stylePractice.container}>
+      <AppHeader 
+        fullname={fullname}
+        message={message} />
+      <Content message={message} fullname={fullname} />
+      <AppFooter footerMessage = {footerMessage} />
+      <TextInput
+        style = {stylePractice.input}   
+        placeholder="Enter your fullname"
+        value={fullname}
+        onChangeText={setFullname}
+         />
     </View>
-  )
+  );
 }
 
-export default App
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

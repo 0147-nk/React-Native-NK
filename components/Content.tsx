@@ -1,18 +1,23 @@
 import { StyleSheet, Text, View, Button, Alert } from "react-native";
 import React from "react";
+import { stylePractice } from "../styles/styles";
 type messageType = {
   message: string;
   fullname: string;
 };
-
 const Content = ({ message, fullname }: messageType): React.JSX.Element => {
+  
+  const [displayFullname, setDisplayFullname] = React.useState('');
   const handleButton = () => {
-    Alert.alert("Hello", fullname);
+    setDisplayFullname(fullname);
+    Alert.alert("Hello", `Input your fullname : ${fullname}`);
   };
   return (
     <View>
-      <Text style={styles.text}>{message}</Text>
-      <Button title="Click ME" onPress={handleButton} />
+      <Text style={stylePractice.textContent}>{message}</Text>
+      <Text style={stylePractice.textContent}>{displayFullname}</Text>
+      <Button title="Click ME" onPress={handleButton}/> 
+      
     </View>
   );
 };
@@ -20,13 +25,5 @@ const Content = ({ message, fullname }: messageType): React.JSX.Element => {
 export default Content;
 
 const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    fontSize: 18,
-    marginBottom: 20,
-  },
+  
 });
