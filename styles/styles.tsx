@@ -111,21 +111,21 @@ const stylePractice = StyleSheet.create({
 const stylesLogin = StyleSheet.create({ 
   container: { 
     justifyContent: "center", 
-    padding: 20, 
-    marginTop: 35, 
-    backgroundColor: '#ffffff', // ตงคาสพนหลงเปนสขาว 
-    borderRadius: 10, // เพมความมนใหกบขอบคอนเทนเนอร 
-    elevation: 3, // เพมเงาใหกบคอนเทนเนอร (เฉพาะ Android) 
-    width: '100%', // ตงความกวางของ container ให้เต็มหน้าจอ 
+    padding: 25, 
+    // marginTop: 20, 
+    backgroundColor: '#003249',
+    borderRadius: 10,
+    elevation: 3,
+    width: '100%',
   }, 
   input: { 
-    height: 45, // เพมความสงของ TextInput 
-    borderColor: "gray", // เปลยนสขอบเปนสเทาออน 
+    height: 45, 
+    borderColor: "gray", 
     borderWidth: 1,  
-    borderRadius: 8, // เพมความมนใหกบขอบ TextInput 
-    marginBottom: 15, // เพมระยะหางดานลางระหวาง TextInput 
-    paddingHorizontal: 15, // เพมระยะหางภายใน TextInput 
-    backgroundColor: "#f9f9f9", // ตงคาสพนหลงของ TextInput 
+    borderRadius: 8, 
+    marginBottom: 15,
+    paddingHorizontal: 15, 
+    backgroundColor: "#f9f9f9",
   },
 }); 
  
