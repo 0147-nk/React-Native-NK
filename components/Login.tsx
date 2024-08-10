@@ -8,7 +8,11 @@ const login = (): React.JSX.Element => {
 
   const handleSubmit = () => {
     if (name === "" && email === "") {
-      Alert.alert("Alert", "Please Enter Name\nPlease Enter Email");
+      Alert.alert("Alert", "Please Enter Name\nPlease Enter Email", 
+      [
+        // {text: "OK"} set text to alert btn
+        {text: "OK"}
+      ],);
     } else if (name === "") {
       Alert.alert("Alert", "Please Enter Name");
     } else if (email === "") {

@@ -111,8 +111,8 @@ const stylePractice = StyleSheet.create({
 const stylesLogin = StyleSheet.create({ 
   container: { 
     justifyContent: "center", 
-    padding: 25, 
-    // marginTop: 20, 
+    padding: 20, 
+    marginTop: 0, 
     backgroundColor: '#003249',
     borderRadius: 10,
     elevation: 3,
