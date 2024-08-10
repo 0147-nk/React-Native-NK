@@ -24,26 +24,26 @@ const login = (): React.JSX.Element => {
     // }
     if (!name) {
       // Alert.alert("Alert", "Please Enter Name");
-      errorMessage += "Please Enter Name\n";
+      errorMessage += "Please Enter Name\n", [{text: "OK"}];
     }
     if (!email) {
       // Alert.alert("Alert", "Please Enter Email");
-      errorMessage += "Please Enter Email\n";
+      errorMessage += "Please Enter Email\n", [{text: "OK"}];
     } else if (!validateEmail(email)) {
-      errorMessage = "Invalid Email Format\n";
+      errorMessage = "Invalid Email Format\n", [{text: "OK"}];
     }
     if (!password) {
       // Alert.alert("Alert", "Please Enter Password");
-      errorMessage += "Please Enter Password\n";
+      errorMessage += "Please Enter Password\n", [{text: "OK"}];
     } else if (password.length < 6) {
       // Alert.alert("Alert", "Password must be atleast 6 characters");
-      errorMessage += "Password must be atleast 6 characters";
+      errorMessage += "Password must be atleast 6 characters", [{text: "OK"}];
     }
     if (errorMessage) {
-      Alert.alert("Error", errorMessage.trim(),);
+      Alert.alert("Error", errorMessage.trim(), [{text: "OK"}]);
       return;
     }
-    Alert.alert("Alert", "Success");
+    Alert.alert("Alert", "Success", [{text: "OK"}]);
   };
 
   return (
