@@ -149,22 +149,74 @@ const styleFlatList = StyleSheet.create({
 });
 const styleFlatListBackend = StyleSheet.create({
   container: {
-  justifyContent: 'center',
-  paddingTop: 50,
+    justifyContent: "center",
+    paddingTop: 50,
   },
   item: {
-  backgroundColor: '#f9c2ff',
-  padding: 20,
-  marginVertical: 8,
-  marginHorizontal: 16,
+    backgroundColor: "#f9c2ff",
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
   },
   name: {
-  fontSize: 20,
-  fontWeight: 'bold',
+    fontSize: 20,
+    fontWeight: "bold",
   },
   email: {
-  fontSize: 16,
+    fontSize: 16,
   },
-  });
+});
 
-export { styles, stylePractice, stylesLogin, styleFlatList, styleFlatListBackend };
+const styleNewApps = StyleSheet.create({
+  container: {
+    backgroundColor: "#224870",
+    padding: 16,
+  },
+  loadingContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  errorContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  errorText: {
+    fontSize: 18,
+    color: "red",
+  },
+  card: {
+    backgroundColor: "#4EA5D9",
+    padding: 16,
+    marginVertical: 8,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  headline: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 8,
+    color: "white",
+  },
+  date: {
+    fontSize: 14,
+    color: "#fff",
+    marginBottom: 8,
+  },
+  description: {
+    fontSize: 16,
+    color: "#fff",
+  },
+});
+
+export {
+  styles,
+  stylePractice,
+  stylesLogin,
+  styleFlatList,
+  styleFlatListBackend,
+  styleNewApps,
+};

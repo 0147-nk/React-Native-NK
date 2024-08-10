@@ -6,6 +6,7 @@ import { stylesLogin } from "./styles/styles";
 import Login from "./components/Login";
 import FlatListExample from "./components/FlatListExample";
 import FlatListBackend from "./components/FlatListBackend";
+import NewApps from "./components/NewApps";
 
 const App = (): React.JSX.Element => {
   return (
@@ -14,8 +15,8 @@ const App = (): React.JSX.Element => {
       {/* <ProfileScreen /> */}
       {/* <Login/> */}
       {/* <FlatListExample/> */}
-      <FlatListBackend/>
-      
+      {/* <FlatListBackend/> */}
+      <NewApps/>
     </View>
   );
 };

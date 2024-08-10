@@ -1,6 +1,6 @@
 import { ActivityIndicator, FlatList, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { styleFlatList, styleFlatListBackend } from "../styles/styles";
+import { styleFlatList, styleFlatListBackend, } from "../styles/styles";
 
 interface user {
   id: number;
