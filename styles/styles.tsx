@@ -108,25 +108,63 @@ const stylePractice = StyleSheet.create({
   },
 });
 
-const stylesLogin = StyleSheet.create({ 
-  container: { 
-    justifyContent: "center", 
-    padding: 20, 
-    marginTop: 0, 
-    backgroundColor: '#003249',
+const stylesLogin = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    padding: 20,
+    marginTop: 0,
+    backgroundColor: "#003249",
     borderRadius: 10,
     elevation: 3,
-    width: '100%',
-  }, 
-  input: { 
-    height: 45, 
-    borderColor: "gray", 
-    borderWidth: 1,  
-    borderRadius: 8, 
+    width: "100%",
+  },
+  input: {
+    height: 45,
+    borderColor: "gray",
+    borderWidth: 1,
+    borderRadius: 8,
     marginBottom: 15,
-    paddingHorizontal: 15, 
+    paddingHorizontal: 15,
     backgroundColor: "#f9f9f9",
   },
-}); 
- 
-export { styles, stylePractice, stylesLogin };
+});
+
+const styleFlatList = StyleSheet.create({
+  container: {
+    marginTop: 50,
+  },
+  item: {
+    backgroundColor: "#f9c2ff",
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  name: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  email: {
+    fontSize: 14,
+  },
+});
+const styleFlatListBackend = StyleSheet.create({
+  container: {
+  justifyContent: 'center',
+  paddingTop: 50,
+  },
+  item: {
+  backgroundColor: '#f9c2ff',
+  padding: 20,
+  marginVertical: 8,
+  marginHorizontal: 16,
+  },
+  name: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  },
+  email: {
+  fontSize: 16,
+  },
+  });
+
+export { styles, stylePractice, stylesLogin, styleFlatList, styleFlatListBackend };

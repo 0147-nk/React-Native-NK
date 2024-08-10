@@ -4,13 +4,18 @@ import ProfileScreen from "./components/ProfileScreen";
 // import UseEffectExample from './components/UseEffectExample'
 import { stylesLogin } from "./styles/styles";
 import Login from "./components/Login";
+import FlatListExample from "./components/FlatListExample";
+import FlatListBackend from "./components/FlatListBackend";
 
 const App = (): React.JSX.Element => {
   return (
     <View>
       {/* <Text>App</Text> */}
-      <ProfileScreen />
-      <Login/>
+      {/* <ProfileScreen /> */}
+      {/* <Login/> */}
+      {/* <FlatListExample/> */}
+      <FlatListBackend/>
+      
     </View>
   );
 };
