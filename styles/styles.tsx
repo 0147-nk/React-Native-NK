@@ -412,7 +412,7 @@ const styleModalPractice = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f5f5f5',
-    marginTop:50
+    marginTop: 50,
   },
   title: {
     fontSize: 24,
@@ -448,6 +448,7 @@ const styleModalPractice = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 10,
     elevation: 5,
+    marginHorizontal: "auto",
   },
   closeButton: {
     backgroundColor: '#FF3B30',

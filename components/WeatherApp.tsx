@@ -36,10 +36,10 @@ const WeatherApp = (): React.JSX.Element => {
             {/* <Text style={styleModal.modalText}>Hello London</Text> */}
             <WeatherLondon/>
             <Pressable
-              style={[styleModal.button, styleModal.buttonClose]}
+              style={[styleModalPractice.button, styleModalPractice.closeButton]}
               onPress={() => setLondonVisible(!LondonVisible)}
             >
-              <Text style={styleModalPractice.closeButton}>Hide Modal</Text>
+              <Text style={styleModalPractice.buttonText}>Hide Modal</Text>
             </Pressable>
           </View>
         </Modal>
@@ -50,13 +50,14 @@ const WeatherApp = (): React.JSX.Element => {
           visible={BangkokVisible}
           onRequestClose={() => setBangkokVisible(!BangkokVisible)}
         >
-          <View style={styleModal.modalView}>
-            <Text style={styleModal.modalText}>Hello Bangkok</Text>
+          <View style={styleModalPractice.modalContainer}>
+            {/* <Text style={styleModal.modalText}>Hello Bangkok</Text> */}
+            <WeatherBangkok/>
             <Pressable
-              style={[styleModal.button, styleModal.buttonClose]}
+              style={[styleModalPractice.button, styleModalPractice.closeButton]}
               onPress={() => setBangkokVisible(!BangkokVisible)}
             >
-              <Text style={styleModal.textStyle}>Hide Modal</Text>
+              <Text style={styleModalPractice.buttonText}>Hide Modal</Text>
             </Pressable>
           </View>
         </Modal>
