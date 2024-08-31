@@ -7,6 +7,10 @@ import Login from "./components/Login";
 import FlatListExample from "./components/FlatListExample";
 import FlatListBackend from "./components/FlatListBackend";
 import NewApps from "./components/NewApps";
+import WeatherBangkok from "./components/WeatherBangkok";
+import WeatherLondon from "./components/WeatherLondon";
+import ModalExample from "./components/ModalExample";
+import WeatherApp from "./components/WeatherApp";
 
 const App = (): React.JSX.Element => {
   return (
@@ -16,7 +20,11 @@ const App = (): React.JSX.Element => {
       {/* <Login/> */}
       {/* <FlatListExample/> */}
       {/* <FlatListBackend/> */}
-      <NewApps/>
+      {/* <WeatherBangkok/> */}
+      {/* <WeatherLondon/> */}
+      {/* <NewApps/> */}
+      {/* <ModalExample/> */}
+      <WeatherApp/>
     </View>
   );
 };

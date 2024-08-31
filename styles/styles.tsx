@@ -212,6 +212,259 @@ const styleNewApps = StyleSheet.create({
   },
 });
 
+const styleWeatherLondon = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    paddingTop: 10,
+    backgroundColor: "#f5f5f5",
+    height: "70%",
+  },
+  centeredContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  errorText: {
+    fontSize: 18,
+    color: "red",
+  },
+  cityName: {
+    fontSize: 36,
+    fontWeight: "bold",
+    marginBottom: 8,
+    color: "#333",
+  },
+  temp: {
+    fontSize: 64,
+    fontWeight: "bold",
+    marginBottom: 8,
+    color: "#ff63ff",
+  },
+  weatherMain: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 4,
+    color: "#333",
+  },
+  weatherDescription: {
+    fontSize: 20,
+    fontStyle: "italic",
+    marginBottom: 16,
+    color: "#666",
+  },
+  details: {
+    marginTop: 16,
+    paddingHorizontal: 16,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  detailContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 4,
+  },
+  detailKey: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  detailValue: {
+    fontSize: 18,
+    color: "#333",
+  },
+});
+
+const styleWeatherBangkok = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#87DFD6",
+  },
+  loadingContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+  errorContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+  errorText: {
+    fontSize: 18,
+    color: "red",
+  },
+  dateText: {
+    fontSize: 18,
+    color: "#000",
+    marginBottom: 16,
+    marginTop: 20,
+  },
+  cityName: {
+    fontSize: 36,
+    fontWeight: "bold",
+    marginBottom: 8,
+    color: "#333",
+  },
+  temp: {
+    fontSize: 64,
+    fontWeight: "bold",
+    marginBottom: 8,
+    color: "#CD5C08",
+  },
+  weatherMain: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 4,
+    color: "#333",
+  },
+  weatherDescription: {
+    fontSize: 20,
+    fontStyle: "italic",
+    marginBottom: 16,
+    color: "#666",
+  },
+  details: {
+    marginTop: 16,
+    paddingHorizontal: 16,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  detailContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 4,
+  },
+  detailKey: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  detailValue: {
+    fontSize: 18,
+    color: "#333",
+  },
+});
+
+const styleModal = StyleSheet.create({
+  centeredView: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 100,
+  },
+  modalView: {
+    margin: 50,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center",
+  },
+});
+
+const styleModalPractice = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+    marginTop:50
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  button: {
+    backgroundColor: '#3AA6B9',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    marginBottom: 10,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  modalBackground: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContainer: {
+    width: '90%',
+    backgroundColor: '#f9f9f9',
+    borderRadius: 20,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+  closeButton: {
+    backgroundColor: '#FF3B30',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    marginTop: 20,
+    alignItems:'center'
+  },
+  closeButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
+
+
 export {
   styles,
   stylePractice,
@@ -219,4 +472,8 @@ export {
   styleFlatList,
   styleFlatListBackend,
   styleNewApps,
+  styleWeatherLondon,
+  styleWeatherBangkok,
+  styleModal,
+  styleModalPractice,
 };
