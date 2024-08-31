@@ -5,17 +5,35 @@ import ProfileScreen from "./components/ProfileScreen";
 import AboutScreen from "./screens/AboutScreen";
 import HomeScreen from "./screens/HomeScreen";
 import CreatePostScreen from "./screens/CreatePostScreen";
-import {NavigationContainer} from "@react-navigation/native"
-import {createNativeStackNavigator} from "@react-navigation/native-stack"
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const App = (): React.JSX.Element => {
   const HomeStack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <HomeStack.Navigator initialRouteName="Home">
-        <HomeStack.Screen name="Home" component={HomeScreen}/>
-        <HomeStack.Screen name="About" component={AboutScreen}/>
-        <HomeStack.Screen name="CreatePost" component={CreatePostScreen}/>
+      <HomeStack.Navigator
+        screenOptions={{ //global option for every stack
+          headerStyle: { backgroundColor: "#20b2ae" },
+          headerTintColor: "white",
+          headerTitleStyle: { fontWeight: "bold" },
+          // headerTitleAlign: "center",
+        }}
+        initialRouteName="Home"
+      >
+        <HomeStack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "หน้าหลัก" }}
+        />
+        <HomeStack.Screen
+          name="About"
+          component={AboutScreen}
+          options={{
+            title: "เกี่ยวกับเรา",
+          }}
+        />
+        <HomeStack.Screen name="CreatePost" component={CreatePostScreen} />
       </HomeStack.Navigator>
     </NavigationContainer>
   );
