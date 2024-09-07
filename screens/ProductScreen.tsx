@@ -36,32 +36,12 @@ const HomeScreen = (): React.JSX.Element => {
           />
         </HeaderButtons>
       ),
-      headerRight: () => (
-        <HeaderButtons HeaderButtonComponent={MaterialHeaderButton}>
-          <Item
-            title="logout"
-            iconName="logout"
-            onPress={() => {
-              Alert.alert("Log out", "Close Menu");
-            }}
-          />
-        </HeaderButtons>
-      ),
     });
   }, [navigation]);
 
-  const gotoAbout = () => {
-    navigation.navigate("About", {
-      companyname: "Thai Nichi Institute of tecnology",
-      companyId: 100,
-    });
-  };
-
   return (
     <View style={styleHome.container}>
-      <MaterialIcon name="home" size={40} color="blue" />
-      <Text>HomeScreen</Text>
-      <Button title="About us" onPress={gotoAbout} />
+      <Text>Product</Text>
     </View>
   );
 };

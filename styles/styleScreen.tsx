@@ -45,4 +45,19 @@ const styleHome = StyleSheet.create({
   },
 });
 
-export { styleAbout, styleHome };
+const logoStyle = StyleSheet.create ({
+  logo: {
+    width: 70,
+    height: 50
+  }
+});
+
+const menuStyle = StyleSheet.create({
+
+});
+
+const productStyle = StyleSheet.create({
+
+});
+
+export { styleAbout, styleHome, logoStyle, menuStyle, productStyle };
