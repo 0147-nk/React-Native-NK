@@ -45,19 +45,51 @@ const styleHome = StyleSheet.create({
   },
 });
 
-const logoStyle = StyleSheet.create ({
+const logoStyle = StyleSheet.create({
   logo: {
     width: 70,
-    height: 50
-  }
+    height: 50,
+  },
 });
 
-const menuStyle = StyleSheet.create({
+const menuStyle = StyleSheet.create({});
 
+const productStyle = StyleSheet.create({});
+
+const detailStyle = StyleSheet.create({
+  container: {
+    backgroundColor: "#f0f0f0", // สีพื้นหลัง
+  },
+  listContent: {
+    paddingHorizontal: 10, // การเว้นวรรคขอบซ้ายและขวาเท่ากัน
+  },
+  titleStyle: {
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "red", // สีขาวส าหรับชื่อ
+  },
+  tileContainer: {
+    borderRadius: 10, //ก าหนดให้มุมของ container มีความโค้งมน
+    overflow: "hidden", //ก าหนดให้เนื้อหาที่อาจล้นออกจากขอบของ container ไม่แสดงผล
+    marginBottom: 10, //ก าหนดระยะห่างจากขอบล่างของ container ไปยัง element ต่อไปที่อยู่ด้านล่าง
+    elevation: 5, // เงาส าหรับ Android
+    shadowOffset: { width: 0, height: 2 }, //ก าหนดต าแหน่งของเงาที่แสดงผล
+    shadowOpacity: 0.25, //ก าหนดระดับความโปร่งแสงของเงา
+    shadowRadius: 3.84, //ก าหนดรัศมีของการกระจายตัวของเงา
+    margin: 5,
+    // opacity: 0.5, // ความโปร่งใสของภาพ , ค่าน้อยจะโปร่งใสมาก
+  },
+  captionStyle: {
+    fontSize: 14,
+    color: "red", // สีขาวส าหรับวันที่
+  },
 });
 
-const productStyle = StyleSheet.create({
-
-});
-
-export { styleAbout, styleHome, logoStyle, menuStyle, productStyle };
+export {
+  styleAbout,
+  styleHome,
+  logoStyle,
+  menuStyle,
+  productStyle,
+  detailStyle,
+};
