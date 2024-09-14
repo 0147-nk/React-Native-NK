@@ -12,6 +12,7 @@ import { HeaderButtonsProvider } from "react-navigation-header-buttons";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ProductScreen from "./screens/ProductScreen";
+import DetailScreen from "./screens/DetailScreen";
 
 const HomeStack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -57,13 +58,14 @@ function ProductStackScreen() {
       }}
     >
       <ProductStack.Screen
-        name="Product"
+        name="ProductStackt"
         component={ProductScreen}
       />
-      {/* <HomeStack.Screen name='CreatePost' component={CreatePostScreen}/> */}
+      <ProductStack.Screen name='Detail' component={DetailScreen}/>
     </ProductStack.Navigator>
   );
 }
+
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaProvider>
