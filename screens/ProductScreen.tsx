@@ -17,7 +17,7 @@ const MaterialHeaderButton = (props: any) => (
   <HeaderButton IconComponent={MaterialIcon} iconSize={23} {...props} />
 );
 
-const HomeScreen = (): React.JSX.Element => {
+const ProductScreen = (): React.JSX.Element => {
   const navigation = useNavigation<any>();
 
   useLayoutEffect(() => {
@@ -46,4 +46,4 @@ const HomeScreen = (): React.JSX.Element => {
   );
 };
 
-export default HomeScreen;
+export default ProductScreen;

@@ -67,7 +67,7 @@ function ProductStackScreen() {
     >
       <ProductStack.Screen
         name="Home"
-        component={ProductStackScreen}
+        component={HomeStackScreen}
         // options={{ title: "หน้าหลัก" }}
       />
       <ProductStack.Screen
