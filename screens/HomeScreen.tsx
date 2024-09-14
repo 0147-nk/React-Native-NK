@@ -18,6 +18,7 @@ const MaterialHeaderButton = (props: any) => (
 );
 
 const HomeScreen = (): React.JSX.Element => {
+  
   const navigation = useNavigation<any>();
 
   useLayoutEffect(() => {
@@ -31,7 +32,8 @@ const HomeScreen = (): React.JSX.Element => {
             title="menu"
             iconName="menu"
             onPress={() => {
-              navigation.openDrawer()
+              // Alert.alert("Open Menu", "Hello React Native");
+              navigation.openDrawer();
             }}
           />
         </HeaderButtons>

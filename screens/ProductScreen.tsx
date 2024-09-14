@@ -1,15 +1,14 @@
 import { View, Text, Button, Alert } from "react-native";
-import React, { useLayoutEffect } from "react";
-import { styleHome } from "../styles/styleScreen";
-import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
-import { useNavigation } from "@react-navigation/native";
+import React, { useCallback, useEffect, useLayoutEffect } from "react";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 ("@react-navigation/native");
-import AppLogo from "../components/AppLogo";
+import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import {
   HeaderButton,
   HeaderButtons,
   Item,
 } from "react-navigation-header-buttons";
+import { findAllProduct } from "../Service/product-services";
 
 const MaterialHeaderButton = (props: any) => (
   // the `props` here come from <Item ... />
@@ -17,13 +16,11 @@ const MaterialHeaderButton = (props: any) => (
   <HeaderButton IconComponent={MaterialIcon} iconSize={23} {...props} />
 );
 
-const ProductScreen = (): React.JSX.Element => {
+const ProductScreen = ():React.JSX.Element => {
   const navigation = useNavigation<any>();
-
   useLayoutEffect(() => {
     navigation.setOptions({
       title: "หน้าหลัก",
-      headerTitle: () => <AppLogo />,
       headerTitleAlign: "center",
       headerLeft: () => (
         <HeaderButtons HeaderButtonComponent={MaterialHeaderButton}>
@@ -31,7 +28,8 @@ const ProductScreen = (): React.JSX.Element => {
             title="menu"
             iconName="menu"
             onPress={() => {
-              navigation.openDrawer()
+              // Alert.alert("Open Menu", "Hello React Native");
+              navigation.openDrawer();
             }}
           />
         </HeaderButtons>
@@ -39,11 +37,26 @@ const ProductScreen = (): React.JSX.Element => {
     });
   }, [navigation]);
 
-  return (
-    <View style={styleHome.container}>
-      <Text>Product</Text>
-    </View>
-  );
+const getProducts = async () => {
+  try {
+    const response = await findAllProduct();
+    console.log(response.data);
+  } catch (error: any) {
+    console.log(error.message);
+  }
 };
 
-export default ProductScreen;
+useFocusEffect(
+  useCallback(() => {
+    getProducts();
+  }, [])
+)
+
+  return (
+    <View>
+      <Text>ProductScreen</Text>
+    </View>
+  )
+}
+
+export default ProductScreen
